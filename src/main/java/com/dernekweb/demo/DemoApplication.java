@@ -1,4 +1,4 @@
-package com.derknekweb.demo;
+package com.dernekweb.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
