@@ -1,6 +1,6 @@
 package com.dernekweb.demo.entities;
 
-import javax.persistence.Entity;
+import jakarta.persistence.Entity;
 
 @Entity
 public class Haberler extends Etkinlik {

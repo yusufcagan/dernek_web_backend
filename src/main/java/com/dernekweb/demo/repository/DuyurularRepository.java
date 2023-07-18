@@ -1,5 +1,9 @@
 package com.dernekweb.demo.repository;
 
-public class DuyurularRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dernekweb.demo.entities.Duyurular;
+
+public interface DuyurularRepository extends JpaRepository<Duyurular,Long>{
     
 }
