@@ -12,14 +12,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.dernekweb.demo.entities.Haberler;
 import com.dernekweb.demo.service.HaberlerService;
 
+@RestController
 @RequestMapping("/api/haberler")
 public class HaberlerController {
     
-    private HaberlerService haberlerService;
+    private final HaberlerService haberlerService;
+
+    public HaberlerController(HaberlerService haberlerService) {
+        this.haberlerService=haberlerService;
+    }
 
     @GetMapping
     public ResponseEntity<List<Haberler>> getAllHaberler() {

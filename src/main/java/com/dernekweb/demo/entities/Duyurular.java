@@ -5,18 +5,18 @@ import jakarta.persistence.Entity;
 @Entity
 public class Duyurular extends Etkinlik {
 
-    private String resim;
+    private String resimYolu;
 
     public Duyurular(){
         
     }
 
-    public String getResim() {
-        return resim;
+    public String getResimYolu() {
+        return resimYolu;
     }
 
-    public void setResim(String resim) {
-        this.resim = resim;
+    public void setResimYolu(String resimYolu) {
+        this.resimYolu = resimYolu;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Duyurular extends Etkinlik {
                 ", konu='" + getKonu() + '\'' +
                 ", icerik='" + getIcerik() + '\'' +
                 ", gecerlilikTarihi=" + getGecerlilikTarihi() +
-                ", resim='" + resim + '\'' +
+                ", resimYolu='" + resimYolu + '\'' +
                 '}';
     }
 }
