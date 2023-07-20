@@ -3,7 +3,6 @@ package com.dernekweb.demo.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dernekweb.demo.entities.Duyurular;
@@ -13,7 +12,6 @@ import com.dernekweb.demo.repository.DuyurularRepository;
 public class DuyurularService {
     private final DuyurularRepository duyurularRepository;
 
-    @Autowired
     public DuyurularService(DuyurularRepository duyurularRepository){
         this.duyurularRepository=duyurularRepository;
     }

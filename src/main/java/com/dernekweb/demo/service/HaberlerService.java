@@ -3,7 +3,6 @@ package com.dernekweb.demo.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dernekweb.demo.entities.Haberler;
@@ -13,7 +12,6 @@ import com.dernekweb.demo.repository.HaberlerRepository;
 public class HaberlerService {
     private final HaberlerRepository haberlerRepository;
 
-    @Autowired
     public HaberlerService(HaberlerRepository haberlerRepository){
         this.haberlerRepository=haberlerRepository;
     }
