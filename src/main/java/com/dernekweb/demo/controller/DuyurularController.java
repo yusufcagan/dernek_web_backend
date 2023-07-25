@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.dernekweb.demo.entities.Duyurular;
 import com.dernekweb.demo.service.DuyurularService;
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/api/duyurular")
 public class DuyurularController {
@@ -81,9 +82,9 @@ public ResponseEntity<String> yukleResim(@RequestParam("resim") MultipartFile re
 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteDuyurular(@PathVariable Long id) {
+    public ResponseEntity<String> deleteDuyurular(@PathVariable Long id) {
         duyurularService.deleteDuyurular(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok("Succes Delete");
     }
 
 }

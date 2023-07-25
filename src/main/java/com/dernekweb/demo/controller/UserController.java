@@ -3,6 +3,7 @@ package com.dernekweb.demo.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import com.dernekweb.demo.entities.LoginRequest;
 import com.dernekweb.demo.entities.User;
 import com.dernekweb.demo.service.UserService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/users")
 public class UserController {

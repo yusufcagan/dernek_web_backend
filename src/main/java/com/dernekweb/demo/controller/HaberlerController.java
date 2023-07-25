@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dernekweb.demo.entities.Haberler;
 import com.dernekweb.demo.service.HaberlerService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/haberler")
 public class HaberlerController {
@@ -58,9 +60,9 @@ public class HaberlerController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteHaberler(@PathVariable Long id) {
+    public ResponseEntity<String> deleteHaberler(@PathVariable Long id) {
         haberlerService.deleteHaberler(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok("haber silindi");
     }
 
 }
