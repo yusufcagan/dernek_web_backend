@@ -53,6 +53,7 @@ public class DuyurularController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdDuyuru);
     }
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/resim-yukle")
 public ResponseEntity<String> yukleResim(@RequestParam("resim") MultipartFile resim) {
     try {
